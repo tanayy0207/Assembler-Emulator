@@ -1,0 +1,67 @@
+/*****************************************************************************
+TITLE: Claims
+AUTHOR: Tanay Gupta-2301CS59
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS2102 Computer Architecture.
+*****************************************************************************/
+
+=======
+Files:
+=======
+
+
+   * Each file—asm.cpp, emu.cpp, and claims.txt—includes my name, roll number, and a statement of authorship at the beginning.
+
+
+   *Evidence of assembler functionality is provided through output files for seven test cases: test1 (3 output files), test2 (2 output   files), test3 (3 output files), test4 (3 output files), MyBubbleSort (3 output files), test5 (3 output files), test6 (3 output files), and test7 (2 output files). All test files have been verified to function correctly.
+
+
+   *Both programs were successfully compiled without errors or warnings using 
+g++ asm.cpp -o asm and g++ emu.cpp -o emu.
+=============================
+Program format and structure:
+=============================
+Assembler:
+
+Includes structures for managing labels and mnemonics:
+- TableOfSymbols: Stores labels.
+- TableOfLiterals: Holds literal values.
+- MOT_TableEntries: A map linking mnemonics to opcode entries.
+Key custom functions include:
+- LengthOfString: Determines string length.
+- my_begin: Returns the start of a string.
+- space_iss: Checks for whitespace characters.
+- rub: Deletes a substring from a string.
+- dizit: Validates if a character is numeric.
+- SubS: Extracts a substring.
+- locate: Finds a substring’s position.
+- rub2: Removes a substring from a string.
+- StoulFunc: Custom stoul implementation.
+- trim: Removes surrounding whitespace.
+- locate_if: Finds the first element in a range that meets a condition.
+- Push_In: Appends an element to a vector.
+- Receive_Line: Reads a line from a file stream.
+Implements a single routine for both assembly passes, label error detection, and proper formatting and structure.
+Provides clear variable names and comments, generates an advanced listing file, and assembles test programs accurately, including support for the SET instruction.
+
+
+2. The emulator:
+
+ * Uses data structures to manage memory, mnemonic entries, and a linked list structure for words.
+ * Loads object files, performs memory dumps before and after execution (-before/-after), and traces program output with -trace.
+ * Implements various utility functions for handling I/O, files, memory, and instruction tracking.
+ * Uses global variables to manage registers and memory, loading machine code from the object file into memory.
+ * The main function handles command-line arguments, file operations, and executes memory dumps or traces as specified.
+ * Detects and handles errant programs effectively.
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+  * Ran seven tests with issues identified only in test2.asm and test7.asm, as expected.
+  * Remaining tests ran error-free, generating three output files for each: a listing file, an error log, and a machine-readable object file.
+2. The emulator:
+
+  * Three tests were conducted. The first test resulted in an infinite loop and a segmentation fault, while the other two completed without errors.
+  * Output trace data matched the expected results, with trace data also provided in the submitted zip file.
